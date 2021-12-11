@@ -8,7 +8,8 @@ headline: |
 
 <!-- this is a subheadline -->
 I'm from 🇨🇦
-and love data science!
+and love data science! I code in R and Python 🐍 also make
+R hexagon logos for packages.
 
 
-You have landed on my blog portfolio, thanks for showing up.
+You have landed on my blog portfolio. 🦄
