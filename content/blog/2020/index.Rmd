@@ -1,0 +1,66 @@
+---
+title: "Heyy you"
+author: "Zane Dax"
+date: 2021-12-11T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	collapse = TRUE
+)
+library(tidyverse)
+```
+
+# Blog Post
+
+This is a blog post about Star Wars.
+
+You can embed an R code chunk like this:
+
+```{r fig.height=8, fig.width=10}
+starwars %>% 
+  select(eye_color, height) %>% 
+  group_by(eye_color) %>% 
+  ggplot(
+    aes(x= height,
+        y= eye_color)
+  )+
+  geom_point(size=3, alpha=0.4, color='black')+
+  labs(title = 'Star Wars Data, eye color and height',
+       y='eye color')+
+  theme(
+    text = element_text(size = 12, family = 'Lato'),
+    axis.text.y = element_text(size = 12, face = 'bold')
+  )
+```
+
+
+# Cars Data 
+
+```{r cars}
+summary(cars)
+fit <- lm(dist ~ speed, data = cars)
+fit
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```
+
+
+this concludes the pie section
+

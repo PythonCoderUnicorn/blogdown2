@@ -1,7 +1,7 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
-date: 2020-12-01T21:13:14-05:00
+title: "Heyy you"
+author: "Zane Dax"
+date: 2021-12-11T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
@@ -9,10 +9,28 @@ tags: ["R Markdown", "plot", "regression"]
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<div id="blog-post" class="section level1">
+<h1>Blog Post</h1>
+<p>This is a blog post about Star Wars.</p>
 <p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>starwars %&gt;% 
+  select(eye_color, height) %&gt;% 
+  group_by(eye_color) %&gt;% 
+  ggplot(
+    aes(x= height,
+        y= eye_color)
+  )+
+  geom_point(size=3, alpha=0.4, color=&#39;black&#39;)+
+  labs(title = &#39;Star Wars Data, eye color and height&#39;,
+       y=&#39;eye color&#39;)+
+  theme(
+    text = element_text(size = 12, family = &#39;Lato&#39;),
+    axis.text.y = element_text(size = 12, face = &#39;bold&#39;)
+  )</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="960" /></p>
+</div>
+<div id="cars-data" class="section level1">
+<h1>Cars Data</h1>
 <pre class="r"><code>summary(cars)
 ##      speed           dist       
 ##  Min.   : 4.0   Min.   :  2.00  
@@ -47,4 +65,5 @@ pie(
 Figure 1: A fancy pie chart.
 </p>
 </div>
+<p>this concludes the pie section</p>
 </div>
