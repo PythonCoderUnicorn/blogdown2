@@ -19,7 +19,7 @@ library(tidyverse)
 
 This is a blog post about Star Wars.
 
-You can see how many characters have green eyes or your eye color
+You can see how many characters have green eyes or your eye color.
 
 ```{r fig.height=8, fig.width=10}
 starwars %>% 
